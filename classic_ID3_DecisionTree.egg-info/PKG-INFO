@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: classic-ID3-DecisionTree
-Version: 2.0.2
+Version: 2.0.3
 Summary: ID3 is a Machine Learning Decision Tree Classification Algorithm that uses two methods to build the model. The two methods are Information Gain and Gini Index.
 Home-page: https://github.com/safir72347/ML-ID3-Decision-Tree-Classification-Library-PyPi
 Author: Safir Motiwala

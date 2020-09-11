@@ -13,7 +13,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="classic_ID3_DecisionTree", 
-    version="2.0.2",
+    version="2.0.3",
     author="Safir Motiwala",
     author_email="safirmotiwala@gmail.com",
     description="ID3 is a Machine Learning Decision Tree Classification Algorithm that uses two methods to build the model. The two methods are Information Gain and Gini Index.",
