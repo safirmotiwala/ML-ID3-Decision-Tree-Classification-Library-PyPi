@@ -1,0 +1,7 @@
+README.md
+setup.py
+classic_ID3_DecisionTree.egg-info/PKG-INFO
+classic_ID3_DecisionTree.egg-info/SOURCES.txt
+classic_ID3_DecisionTree.egg-info/dependency_links.txt
+classic_ID3_DecisionTree.egg-info/top_level.txt
+classic_ID3_decision_tree/__init__.py
