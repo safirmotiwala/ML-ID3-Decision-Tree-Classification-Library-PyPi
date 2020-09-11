@@ -59,23 +59,43 @@ print(cm)
 
 # Building the Decision Tree Model with Information Gain
 
-from ID3 import information_gain
-ig = information_gain(X_train, y_train)
-ig.add_features(dataset, 'party')
-print(ig.features)
+from classic_ID3_decision_tree import DecisionTreeClassifier
+id3 = DecisionTreeClassifier()
+id3.add_features(dataset, 'party')
+print(id3.features)
 
 ## Making the decision Tree
-ig.decision_tree()
-y_pred = ig.predict(X_test)
+id3.information_gain(X_train, y_train)
+y_pred = id3.predict(X_test)
 print(y_pred)
 
-y_pred1 = ig.predict(X_train)
+y_pred1 = id3.predict(X_train)
 
 from sklearn.metrics import accuracy_score
-
 a = accuracy_score(y_test, y_pred)
-print(a)
+print("Test Set Accuracy", a)
 
+b = accuracy_score(y_train, y_pred1)
+print("Training Set Accuracy", b)
+
+from sklearn.metrics import confusion_matrix
+cm = confusion_matrix(y_test, y_pred)
+print(cm)
+
+
+# Building the Decision Tree Model with Gini Index
+
+id3.gini_index(X_train, y_train)
+y_pred = id3.predict(X_test)
+
+y_pred1 = id3.predict(X_train)
+
+from sklearn.metrics import accuracy_score
+a = accuracy_score(y_test, y_pred)
+print("Test Set Accuracy", a)
+
+b = accuracy_score(y_train, y_pred1)
+print("Training Set Accuracy", b)
 
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test, y_pred)

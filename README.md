@@ -2,8 +2,11 @@ ID3 Decision Tree Algorithm
 ===================
 
 
-ID3 is a Machine Learning Decision Tree Algorithm that uses two methods to build the model. The two methods are Information Gain and Gini Index.
-This Model consists of only Information Gain. Next update will include Gini Index. 
+ID3 is a Machine Learning Decision Tree Classification Algorithm that uses two methods to build the model. The two methods are Information Gain and Gini Index.
+* Version 1.0.0 - Information Gain Only
+* Version 2.0.0 - Gini Index added
+* Version 2.0.1 - Documentation Sorted
+* Version 2.0.2 - All Sorted
 
 ----------
 
@@ -37,17 +40,21 @@ The Entire DataSet.
 Attributes
 -------------
 
-## * information_gain(X_train, y_train)
+## * DecisionTreeClassifier()
 -------------
-Initialise the Information Gain class with training set.
+Initialise the instance of Decision Tree Classifier class.
 
 ## * add_features(dataset, result_col_name)
 -------------
 Add the features to the model by sending the dataset. The model will fetch the column features. The second parameter is the column name of outcome array.
 
-## * decision_tree()
+## * information_gain(X_train, y_train)
 -------------
-To build the decision tree
+To build the decision tree using Information Gain
+
+## * gini_index(X_train, y_train)
+-------------
+To build the decision tree using Gini Index
 
 ## * predict(y_test)
 -------------
@@ -61,19 +68,24 @@ Predict the Test Set Results
 >  pip install classic-ID3-DecisionTree
 
 ### 2. Import the library
->  from classic_ID3_DecisionTree import information_gain
+>  from classic_ID3_decision_tree import DecisionTreeClassifier
 
-### 3. Create an object for Information Gain class
-> ig = information_gain(X_train, y_train)
+### 3. Create an object for Decision Tree Classifier class
+> id3 = DecisionTreeClassifier()
 
 ### 4. Add Column Features to the model
-> ig.add_features(dataset, result_col_name)
+> id3.add_features(dataset, result_col_name)
 
-### 5. Build the Decision Tree Model
-> ig.decision_tree()
+### 5. Build the Decision Tree Model using Information Gain
+> id3.information_gain(X_train, y_train)
 
-### 5. Predict the Test Set Results
-> y_pred = ig.predict(X_test)
+### OR
+
+### 5. Build the Decision Tree Model using Gini Index
+> id3.gini_index(X_train, y_train)
+
+### 6. Predict the Test Set Results
+> y_pred = id3.predict(X_test)
 
 ----------
 
@@ -111,12 +123,14 @@ Download dataset from [here](https://drive.google.com/file/d/1qjh3SnbrOY3ROXFYYM
 >    * y_train, y_test = y[train_index], y[test_index]
 
 ### 2. Use the ID3 Library
-> * from ID3 import information_gain
-> * ig = information_gain(X_train, y_train)
-> * ig.add_features(dataset, 'party')
-> * print(ig.features)
+> * from classic_ID3_decision_tree import DecisionTreeClassifier
+> * id3 = DecisionTreeClassifier()
+> * id3.add_features(dataset, 'party')
+> * print(id3.features)
 
-> * ig.decision_tree()
+> * id3.information_gain(X_train, y_train)
+> * OR
+> * id3.gini_index(X_train, y_train)
 > * y_pred = ig.predict(X_test)
 
 
