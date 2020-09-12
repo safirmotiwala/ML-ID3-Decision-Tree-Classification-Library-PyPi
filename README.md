@@ -131,7 +131,7 @@ Download dataset from [here](https://drive.google.com/file/d/1qjh3SnbrOY3ROXFYYM
 > * id3.information_gain(X_train, y_train)
 > * OR
 > * id3.gini_index(X_train, y_train)
-> * y_pred = ig.predict(X_test)
+> * y_pred = id3.predict(X_test)
 
 
 ----------
